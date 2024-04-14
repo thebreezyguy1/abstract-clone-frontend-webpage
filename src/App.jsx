@@ -4,6 +4,7 @@ import './App.css'
 import HelpSection from './components/HelpSection';
 import Main from './components/Main';
 import Footer from './components/Footer';
+import HelpBot from './components/HelpBot';
 
 const App = () => {
 
@@ -13,6 +14,7 @@ const App = () => {
       <HelpSection />
       <Main />
       <Footer />
+      <HelpBot />
     </>
   )
 }

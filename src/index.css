@@ -1,10 +1,14 @@
+@import url('https://fonts.cdnfonts.com/css/gt-america-trial');
+
+/*************************************************** General Styling *******************************************/
+
 :root {
-  font-family: GT America Standard, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "GT America Trial", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
+  color: #fff;
   background-color: #242424;
 
   font-synthesis: none;
@@ -13,26 +17,30 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1{
-  margin: 0;
+a, button{
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
 }
 
-.header{
+.flex-container{
   display: flex;
-  flex-direction: row;
-  max-height: 200px;
   align-items: center;
+}
+
+
+.header{
+  max-height: 200px;
   justify-content: space-between;
   padding: 1em 6em;
   background-color: #000;
   margin: 0;
 }
 
-.header h1, .header a{
+h1, .header a{
+  margin: 0;
   display: inline-block;
   font-size: 1.5em;
-  font-weight: 400;
-  color: #fff;
 }
 
 .header-buttons{
@@ -48,22 +56,20 @@ h1{
   font-size: 1.4em;
   padding: 0.5em 1.25em;
   border-radius: 10px;
-  color: #fff;
-  cursor: pointer;
 }
 
-.submit-request{
+.submit-request-btn{
   background-color: #191A1B;
   border: 1px solid #fff;
 }
 
-.sign-in{
+.sign-in-btn{
   background-color: #4C5FD5;
   border: 1px solid #4C5FD5;
   transition: 0.5s;
 }
 
-.sign-in:hover{
+.sign-in-btn:hover{
   background-color: #fff;
   border-color: #fff;
   color: #000;
@@ -88,10 +94,6 @@ h1{
   gap: 0.5em;
 }
 
-#help-center-title{
-  text-decoration: none;
-}
-
 #help-center-title:hover{
   text-decoration: underline;
 }
@@ -101,9 +103,7 @@ h1{
 .help-section-container{
   background-color: #DADBF1;
   margin: 0;
-  display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   height: 400px;
   max-height: 400px;
@@ -112,10 +112,9 @@ h1{
 
 .big-title{
   color: #000;
-  font-weight: 400;
+  font-weight: inherit;
   font-size: 5em;
   letter-spacing: -5px;
-  line-height: 1.5;
 }
 
 input[type='search']{
@@ -139,7 +138,7 @@ form:hover{
 }
 
 form:hover .search-button img {
-  color: #4C5FD5
+  fill: #4C5FD5
 }
 
 form:focus-within{
@@ -152,10 +151,8 @@ input[type='search']:focus{
 }
 
 form{
-  display: flex;
   flex-direction: row;
-  align-items: center;
-  width: 55%;
+  width: 50%;
   border: 1px solid #000;
   border-radius: 5px;
   background-color: #fff;
@@ -172,12 +169,14 @@ form:focus{
   height: 100%;
   display: flex;
   align-items: center;
+  padding: 0 0.5em
 }
 
 .img-icon{
   width: 30px;
   max-width: 30px;
   max-height: 30px;
+  fill: #000;
 }
 
 
@@ -237,11 +236,12 @@ form:focus{
 .footer-container{
   background-color: #000;
   position: relative;
-  padding: 0 2em 2em 2em;
+  padding: 0 2em 3.75em 2em;
 }
 
 .footer-container p{
   margin: 0;
+  line-height: 28px;
 }
 
 .footer-header{
@@ -268,6 +268,11 @@ form:focus{
 .footer-container a{
   text-decoration: none;
   color: #fff;
+  transition: 0.5s;
+}
+
+.footer-container a:hover{
+  text-decoration: underline;
 }
 
 .footer-column-copyright{
@@ -297,4 +302,50 @@ form:focus{
   width: 40px;
   border-radius: 30%;
   margin-bottom: 20px;
+}
+
+strong{
+  color: #fff;
+}
+
+/**************************************** Help Bot **************************************************/
+.help-bot-button{
+  width: 100px;
+  max-width: 100px;
+  max-height: 50px;
+  background-color: #4C5FD5;
+  position: fixed;
+  bottom: 15px;
+  right: 20px;
+  float: right;
+  border-radius: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1em 4em;
+}
+
+.help-bot-inner-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.help-bot-button{
+  border: none;
+}
+
+.help-bot-button p{
+  font-size: 1.25em;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+}
+
+.small-img{
+  width: 20px;
+  max-width: 20px;
+  margin-right: 5px;
 }
